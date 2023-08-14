@@ -1,22 +1,35 @@
 export const Landing = () => {
     return (
-        <div className="h-screen relative bg-void text-void flex flex-col items-center justify-center">
-            <div className="relative flex flex-col items-center bg-stark w-1/3 h-3/4 rounded-lg">
-                <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-fuchsia-300 to-jewel opacity-100 blur-2xl"></div>
-                <div className="relative w-full h-full rounded-lg text-center p-4 bg-stark flex flex-col justify-between">
-                    <div className="space-y-2">
-                        <h1 className="font-unbounded font-semibold text-8xl underline">Newsie</h1>
-                        <p className="font-inter text-xl tracking-widest">the AI powered newsletter.</p>
+        <div className="h-screen bg-gradient-to-tr from-violet-500 to-orange-300 flex flex-col items-center justify-center space-y-0">
+            <div className="">
+                <div className="bg-white text-void shadow-2xl p-8 rounded-lg transition transform ease-in -translate-y-1">
+                    <h1 className="text-7xl font-unbounded font-semibold tracking-wider text-center">Newsie</h1>
+                    <h2 className="font-inter font-thin text-md text-center">A digestable newsletter powered by AI. 📰</h2>
+                    <div className="pt-8">
+                        <p className="font-inter text-lg font-semibold">Select what news topics you would like to receive:</p>
+                        <div className="pt-2 grid grid-cols-3 text-center gap-2 font-inter">
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">World News</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">US News</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Politics</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Business</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Tech</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Medical</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Space</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Entertainment</button>
+                            <button className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300">Sports</button>
+                        </div>
                     </div>
-                    <div className="flex flex-row p-4">
-                        <input
-                            className="bg-stark text-black border-2 border-fuschia focus:outline-none w-3/4 p-2 rounded-tl-md rounded-bl-md ring-fuchsia-300 placeholder:text-md placeholder:font-inter placeholder:text-void"
-                            placeholder="enter your email"
-                        />
-                        <button className="bg-fuschia w-1/4 p-2 rounded-tr-md rounded-br-md text-white font-medium tracking-tight font-inter">subscribe</button>
-                    </div>
+
+                </div>
+                <div className="pt-8 shadow-2xl">
+                    <input
+                        className="pl-8 py-2 placeholder:text-orange-300 rounded-tl-md rounded-bl-md w-2/3 outline-none font-inter"
+                        placeholder="your email address"
+                    />
+                    <button className="bg-violet-500 rounded-tr-md rounded-br-md p-2 text-white font-inter font-medium tracking-tight w-1/3">subscribe</button>
                 </div>
             </div>
+
         </div>
     );
 };
