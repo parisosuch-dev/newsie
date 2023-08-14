@@ -3,7 +3,7 @@ import { useState } from "react";
 export const Button = (props) => {
     const { topic, selectedTopics, setSelectedTopics } = props;
     const [active, setActive] = useState(false);
-    const buttonStyle = "border-2 border-orange-300 rounded-2xl p-1"
+    const buttonStyle = "border-2 border-orange-300 rounded-2xl p-1 text-xs sm:text-lg"
     const activeStyle = buttonStyle + " bg-orange-300 text-white"
 
     const handleClick = () => {

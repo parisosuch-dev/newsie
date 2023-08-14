@@ -1,5 +1,5 @@
 export const AboutSection = () => {
-    const pStyle = "text-lg font-inter font-semibold bg-gray-300/50 rounded-3xl px-2 py-1 w-fit transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1"
+    const pStyle = "text-sm sm:text-lg font-inter font-semibold bg-gray-300/50 rounded-3xl px-2 py-1 w-fit transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1"
 
     return (
         <div className="space-y-2">
