@@ -1,9 +1,30 @@
+import { useState } from "react";
+
 export const Button = (props) => {
-    const { topic, selectTopic } = props;
+    const { topic, selectedTopics, setSelectedTopics } = props;
+    const [active, setActive] = useState(false);
+    const buttonStyle = "border-2 border-orange-300 rounded-2xl p-1"
+    const activeStyle = buttonStyle + " bg-orange-300 text-white"
+
+    const handleClick = () => {
+        setActive(!active);
+        // if it is not active, add it to selectedTopics
+        if (!active) {
+            selectedTopics.push(topic);
+            setSelectedTopics(selectedTopics);
+        }
+        // remove it from list
+        if (active) {
+            const index = selectedTopics.indexOf(topic);
+            selectedTopics.splice(index, 1);
+            setSelectedTopics(selectedTopics);
+        }
+    }
 
     return (
         <button
-            className="border-2 border-orange-300 rounded-2xl p-1 transition ease-in-out delay-50 hover:shadow-md hover:-translate-y-1 hover:shadow-orange-300"
+            className={active ? activeStyle : buttonStyle}
+            onClick={handleClick}
         >
             {topic}
         </button>
